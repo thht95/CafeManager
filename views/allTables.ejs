@@ -1,0 +1,19 @@
+<h2 class="text-center form-group">Danh sách các bàn</h2>
+
+<div class="col-md-12">
+    <% tables.forEach(function(table) { if (table.status == "available") { %> 
+		<div class="col-md-4 text-center" style="height: 150px" data-type="available">
+			<div style="cursor: pointer; padding: 0 90px;">
+				<div><b> <%= table.name %> </b></div>
+				<div><img src="/img/available.png" /></div>
+			</div>
+		</div>
+    <% } else { %>
+        <div class="col-md-4 text-center" style="height: 150px" data-type="reserved"> 
+			<div style="cursor: pointer; padding: 0 90px;">
+				<div><b> <%= table.name %> </b></div>
+				<div><img src="/img/available.png" /></div>
+			</div>
+		</div>
+    <% }}); %>
+</div>
